@@ -2,6 +2,7 @@
 ![CI](https://github.com/Hbollas/breast-cancer-classifier/actions/workflows/python-ci.yml/badge.svg)
 ![Python 3.11](https://img.shields.io/badge/python-3.11-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+**Model card:** [MODEL_CARD.md](MODEL_CARD.md)
 
 ## Results (5-fold CV on training set)
 | Model | Accuracy | Precision | Recall | F1 | ROC-AUC |
