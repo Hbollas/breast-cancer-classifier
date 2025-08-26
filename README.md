@@ -37,3 +37,18 @@ python -m src.predict --model models/mlp_best_grid.joblib --data examples/sample
 # => writes examples/sample_predict.predictions.csv with predicted label and probability
 
 
+
+# run predictions with the tuned pipeline
+python -m src.predict --model models/mlp_best_grid.joblib --data examples/sample_predict.csv
+# => writes examples/sample_predict.predictions.csv with predicted label and probability
+### Visuals
+- **Confusion Matrix (Test):** ![Confusion Matrix](models/mlp_confusion_matrix.png)
+- **ROC Curve (Test):** ![ROC Curve](models/mlp_roc_curve.png)
+- **Permutation Importance (Top 10):** ![Permutation Importance](models/mlp_permutation_importance_top10.png)
+
+### Operating Threshold
+The decision threshold is stored in `models/decision_threshold.json` and can be overridden via:
+```bash
+python -m src.predict --model models/mlp_best_grid.joblib --data examples/sample_predict.csv --threshold 0.40
+
+
