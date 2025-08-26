@@ -26,3 +26,7 @@ data/*
 !data/.gitkeep
 models/*
 !models/.gitkeep
+!models/*.png
+!models/*.csv
+!models/*.json
+
