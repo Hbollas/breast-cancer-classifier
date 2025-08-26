@@ -1,6 +1,6 @@
 # breast-cancer-classifier
 ![CI](https://github.com/Hbollas/breast-cancer-classifier/actions/workflows/python-ci.yml/badge.svg)
-![Python 3.11](https://img.shields.io/badge/python-3.11-blue)
+![Python 3.12](https://img.shields.io/badge/python-3.12-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 **Model card:** [MODEL_CARD.md](MODEL_CARD.md)
 
