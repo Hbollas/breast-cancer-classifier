@@ -47,3 +47,8 @@ predict:
 
 clean:
 	rm -rf __pycache__ */__pycache__ .pytest_cache .mypy_cache .ipynb_checkpoints
+example:
+	$(ACT) && $(PY) -c "import pandas as pd; df=pd.read_csv('data/Breast_cancer_dataset.csv').drop(columns=['id','Unnamed: 32','diagnosis'], errors='ignore'); df.head(3).to_csv('examples/sample_predict.csv', index=False); print('Wrote examples/sample_predict.csv')"
+
+demo: example
+	$(ACT) && $(PY) -m src.predict --model models/mlp_best_grid.joblib --data examples/sample_predict.csv

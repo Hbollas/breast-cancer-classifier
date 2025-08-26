@@ -23,4 +23,17 @@ python -m src.train_model --model logreg --data data/Breast_cancer_dataset.csv -
 python -m src.evaluate --data data/Breast_cancer_dataset.csv --artifacts models/ --model_name logreg
 # or use the tuned MLP already saved: models/mlp_best_grid.joblib
 
+### Quick Demo
+```bash
+# create a tiny example without the target column
+python - <<'PY'
+import pandas as pd
+df = pd.read_csv("data/Breast_cancer_dataset.csv").drop(columns=["id","Unnamed: 32","diagnosis"], errors="ignore")
+df.head(3).to_csv("examples/sample_predict.csv", index=False)
+PY
+
+# run predictions with the tuned pipeline
+python -m src.predict --model models/mlp_best_grid.joblib --data examples/sample_predict.csv
+# => writes examples/sample_predict.predictions.csv with predicted label and probability
+
 
